@@ -52,9 +52,9 @@
       end
 
     end
-   end 
+   end
 
- 
+
 
     context "no money on card" do
       it 'does not allow to touch in at entry_station' do
@@ -64,16 +64,3 @@
 
   end
 end
-
-
-
-
-
-
-
-
-
-
-
-
-

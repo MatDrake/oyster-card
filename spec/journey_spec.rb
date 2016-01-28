@@ -3,8 +3,8 @@ require 'oystercard'
 describe Journey do
 	subject(:journey) { described_class.new(entry_station) }
 	let(:card)  { double(:card, :touch_in => true, :touch_out => true) }
-	let(:entry_station)  { double(:entry_station) }
-  let(:exit_station)  { double(:exit_station) }
+	let(:entry_station)  { double :entry_station, zone: 1 }
+  let(:exit_station)  { double :exit_station, zone: 2 }
 
   context '#in_journey?' do
 
