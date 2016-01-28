@@ -1,8 +1,9 @@
 require './lib/station'
+require './lib/journey'
 
 class OysterCard
 
- attr_reader :balance, :entry_station, :journey_history, :exit_station
+ attr_reader :balance, :entry_station, :journey_history, :exit_station, :journey
 
 
  MAXIMUM_AMOUNT = 90
@@ -10,7 +11,6 @@ class OysterCard
 
 	def initialize
 		@balance = 0
-		
 	end
 
 	def top_up(amount)
@@ -27,7 +27,6 @@ class OysterCard
   def touch_out(station)
     @exit_station = station
     deduct(MINIMUM_AMOUNT)
-    journey_history["exit_station"] = @exit_station
   end
 
   private
