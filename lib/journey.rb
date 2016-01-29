@@ -6,7 +6,7 @@ PENALTY_CHARGE = 6
 
   attr_reader :entry_station, :complete, :previous_journeys
 
-  def initialize(entry_station)
+  def initialize(entry_station=nil)
  	@previous_journeys = {}
     @entry_station = entry_station
     @complete = false
@@ -18,7 +18,7 @@ PENALTY_CHARGE = 6
   	@exit_station = exit_station
   	@previous_journeys["exit_station"] = exit_station
   	complete_journey
-  end 
+  end
 
   def fare
   	previous_journeys["entry_station"] && @previous_journeys["exit_station"] ? 1 : 6
@@ -31,6 +31,6 @@ PENALTY_CHARGE = 6
   def complete_journey
   @complete = true
   end
-  
+
 
 end

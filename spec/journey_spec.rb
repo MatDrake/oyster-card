@@ -54,11 +54,11 @@ describe Journey do
      it 'returns incomplete journey initially' do
       expect(subject.complete).to eq false
     end
-    
+
 
     it 'returns true when journey completed ' do
     subject = Journey.new(entry_station)
-    subject.exit(exit_station) 
+    subject.exit(exit_station)
     expect(subject.complete).to eq(true)
     end
 
@@ -70,12 +70,9 @@ describe Journey do
 
      it 'charges the correct fare if complete journey' do
     subject = Journey.new(entry_station)
-    subject.exit(exit_station) 
+    subject.exit(exit_station)
     expect(subject.fare).to eq OysterCard::MINIMUM_CHARGE
     end
 
 
 end
-
-
-

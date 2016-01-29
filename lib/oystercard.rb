@@ -17,7 +17,7 @@ class OysterCard
 
  def top_up(amount)
  	raise "error balance greater than maximum balance" if balance + amount > MAXIMUM_BALANCE
- 	@balance += amount	
+ 	@balance += amount
  end
 
  def touch_in(station=nil)
@@ -42,4 +42,3 @@ end
  end
 
 end
-
